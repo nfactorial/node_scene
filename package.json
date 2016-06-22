@@ -1,0 +1,32 @@
+{
+  "name": "@nfactorial/node_scene",
+  "version": "0.0.1",
+  "description": "Core server side scene management.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": false,
+      "node": true,
+      "es6": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfactorial/node_scene.git"
+  },
+  "author": "nfactorial",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nfactorial/node_scene/issues"
+  },
+  "homepage": "https://github.com/nfactorial/node_scene#readme",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  },
+  "dependencies": {
+    "@nfactorial/game_state_js": "0.0.4"
+  }
+}
