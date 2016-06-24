@@ -27,6 +27,7 @@
     "chai": "^3.5.0"
   },
   "dependencies": {
+    "@nfactorial/factory_node": "0.0.1",
     "@nfactorial/game_state_js": "0.0.4"
   }
 }
