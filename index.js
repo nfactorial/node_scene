@@ -16,7 +16,8 @@
  * See readme.md for further details on using this module.
  */
 
-module.exports.Network = require('./lib/network');
-module.exports.Scene = require('./lib/scene');
 module.exports.Vec3 = require('./lib/vec3');
+module.exports.Scene = require('./lib/scene');
 module.exports.Entity = require('./lib/entity');
+module.exports.Network = require('./lib/network');
+module.exports.Parameter = require('./lib/parameter');
