@@ -9,7 +9,7 @@ const EntityWriter = require('../../lib/serialisation/entity_writer.js');
 /**
  * Verify the Entity class behaves as expected.
  */
-describe('network/entity_writer', () => {
+describe('serialisation/entity_writer', () => {
     it('Should be empty when constructed', () => {
         const writer = new EntityWriter();
 
