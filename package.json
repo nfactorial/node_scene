@@ -1,6 +1,6 @@
 {
   "name": "@nfactorial/node_scene",
-  "version": "0.1.05",
+  "version": "0.1.06",
   "description": "Core server side scene management.",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "@nfactorial/factory_node": "0.0.1",
-    "@nfactorial/game_state_js": "0.0.4"
+    "@nfactorial/game_state_js": "0.0.81"
   }
 }
