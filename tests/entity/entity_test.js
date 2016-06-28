@@ -26,9 +26,9 @@ describe('entity', () => {
         expect(entity.parent).to.be.null;
 
         // TODO: Verify position etc.
-        expect(entity.position.value.x).to.equal(0);
-        expect(entity.position.value.y).to.equal(0);
-        expect(entity.position.value.z).to.equal(0);
+        expect(entity.position.x).to.equal(0);
+        expect(entity.position.y).to.equal(0);
+        expect(entity.position.z).to.equal(0);
     });
 
     it('Should not be able to be its own parent', () => {
