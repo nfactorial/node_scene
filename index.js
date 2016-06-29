@@ -21,6 +21,7 @@ module.exports.Scene = require('./lib/scene');
 module.exports.Entity = require('./lib/entity');
 module.exports.Network = require('./lib/network');
 module.exports.Parameter = require('./lib/parameter');
+module.exports.Serialisable = require('./lib/serialisable');
 
 module.exports.Script = require('./lib/script');
 module.exports.ScriptRegistry = require('./lib/script/registry.js');
