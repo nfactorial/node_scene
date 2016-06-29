@@ -1,6 +1,6 @@
 {
   "name": "@nfactorial/node_scene",
-  "version": "0.2.05",
+  "version": "0.2.06",
   "description": "Core server side scene management.",
   "main": "index.js",
   "scripts": {
