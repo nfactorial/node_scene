@@ -5,12 +5,12 @@ var expect = chai.expect;
 
 const Vec3 = require('../../lib/vec3');
 const Parameter = require('../../lib/parameter');
-const writeParam = require('../../lib/serialisation/param_writer');
+const writeParam = require('../../lib/serialization/param_writer');
 
 /**
  * Verify the Entity class behaves as expected.
  */
-describe('serialisation/write_param', () => {
+describe('serialization/write_param', () => {
     const INVALID_PARAMETER_TYPE = 'INVALID_TYPE';
     const PARAMETER_NAME = 'testParameter';
 
@@ -49,7 +49,7 @@ describe('serialisation/write_param', () => {
                 name: PARAMETER_NAME,
                 type: INVALID_PARAMETER_TYPE
             });
-        }).to.throw('writeParam - Unknown type encountered during serialisation.');
+        }).to.throw('writeParam - Unknown type encountered during serialization.');
     });
 
     it('Should correctly write scalar parameters', () => {

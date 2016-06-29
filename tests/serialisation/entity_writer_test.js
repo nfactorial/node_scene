@@ -4,8 +4,8 @@ var chai = require('chai');
 var expect = chai.expect;
 
 const Parameter = require('../../lib/parameter');
-const Serialisable = require('../../lib/serialisable');
-const EntityWriter = require('../../lib/serialisation/entity_writer.js');
+const Serializable = require('../../lib/serializable');
+const EntityWriter = require('../../lib/serialization/entity_writer.js');
 
 /**
  * Verify the Entity class behaves as expected.
@@ -43,7 +43,7 @@ describe('serialisation/entity_writer', () => {
         }).to.throw('Unknown type encountered during serialisation.');
     });
 
-    it('Should serialise scalar parameters', () => {
+    it('Should serialize scalar parameters', () => {
         const paramName = 'example';
         const testParam = Parameter.createScalar(paramName);
 
@@ -65,7 +65,7 @@ describe('serialisation/entity_writer', () => {
         expect(writer.buffer.data[0].value).to.equal(0);
     });
 
-    it('Should serialise string parameters', () => {
+    it('Should serialize string parameters', () => {
         const paramName = 'example';
         const testParam = Parameter.createString(paramName);
 
@@ -87,7 +87,7 @@ describe('serialisation/entity_writer', () => {
         expect(writer.buffer.data[0].value).to.equal('');
     });
 
-    it('Should serialise Vec3 parameters', () => {
+    it('Should serialize Vec3 parameters', () => {
         const paramName = 'example';
         const testParam = Parameter.createVec3(paramName);
 
@@ -113,7 +113,7 @@ describe('serialisation/entity_writer', () => {
         expect(writer.buffer.data[0].z).to.equal(3);
     });
 
-    it('Should serialise multiple parameters', () => {
+    it('Should serialize multiple parameters', () => {
         const paramName1 = 'example';
         const paramName2 = 'example2';
         const paramName3 = 'example3';
@@ -123,7 +123,7 @@ describe('serialisation/entity_writer', () => {
         const testParam3 = Parameter.createVec3(paramName3);
 
         const paramValue1 = 10;
-        const paramValue2 = 'testing serialiser';
+        const paramValue2 = 'testing serializer';
 
         testParam1.value = paramValue1;
         testParam2.value = paramValue2;
