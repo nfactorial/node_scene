@@ -23,7 +23,12 @@ describe('entity', () => {
 
         expect(entity.children.length).to.equal(0);
 
+        expect(entity.owner).to.be.null;
+
         expect(entity.parent).to.be.null;
+        expect(entity.trigger).to.be.null;
+        expect(entity.rigidBody).to.be.null;
+        expect(entity.collision).to.be.null;
 
         // TODO: Verify position etc.
         expect(entity.position.x).to.equal(0);
