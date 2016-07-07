@@ -30,7 +30,6 @@ describe('entity', () => {
         expect(entity.rigidBody).to.be.null;
         expect(entity.collision).to.be.null;
 
-        // TODO: Verify position etc.
         expect(entity.position.x).to.equal(0);
         expect(entity.position.y).to.equal(0);
         expect(entity.position.z).to.equal(0);
@@ -82,5 +81,17 @@ describe('entity', () => {
         parent.removeChild(undefined);
         expect(entity.parent).to.equal(parent);
         expect(parent.children.length).to.equal(1);
-    })
+    });
+
+    it('Should throw an exception if no prefab is supplied to initializeFromPrefab', () => {
+        const entity = new Entity(TEST_ENTITY_ID, TEST_ENTITY_NAME);
+
+        expect(() => {
+            entity.initializeFromPrefab();
+        }).to.throw('Entity.initializeFromPrefab - No prefab was specified.');
+
+        expect(() => {
+            entity.initializeFromPrefab(null);
+        }).to.throw('Entity.initializeFromPrefab - No prefab was specified.');
+    });
 });

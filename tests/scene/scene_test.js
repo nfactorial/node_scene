@@ -11,11 +11,13 @@ describe('scene', () => {
     const TEST_ENTITY_NAME = 'TestEntity';
     const INVALID_ENTITY_NAME = 'InvalidEntity';
 
-    it('Should contain a root node when constructed', () => {
+    it('Should contain a root node abd dynamics scene when constructed', () => {
         const scene = new Scene();
 
         expect(scene.root).not.to.be.null;
         expect(scene.root).not.to.be.undefined;
+
+        expect(scene.dynamicsScene).to.be.valid;
 
         expect(scene.findById(scene.root.id)).to.equal(scene.root);
         expect(scene.findByName(scene.root.name)).to.equal(scene.root);
@@ -83,5 +85,17 @@ describe('scene', () => {
         expect(scene.findById(entity2.id)).to.equal(entity2);
         expect(scene.findById(entity3.id)).to.equal(entity3);
         expect(scene.findById(entity4.id)).to.equal(entity4);
+    });
+
+    it('Should throw an exception if no prefab is specified when calling createEntityFromPrefab', () => {
+        const scene = new Scene();
+
+        expect(() => {
+            scene.createEntityFromPrefab();
+        }).to.throw('Scene.createEntityFromPrefab - No prefab was specified for creation.');
+
+        expect(() => {
+            scene.createEntityFromPrefab(null);
+        }).to.throw('Scene.createEntityFromPrefab - No prefab was specified for creation.');
     });
 });
