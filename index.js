@@ -22,6 +22,7 @@ module.exports.Entity = require('./lib/entity');
 module.exports.Network = require('./lib/network');
 module.exports.Parameter = require('./lib/parameter');
 module.exports.Serializable = require('./lib/serializable');
+module.exports.PrefabRegistry = require('./lib/prefab_registry');
 
 module.exports.Script = require('./lib/script');
 module.exports.ScriptRegistry = require('./lib/script/registry.js');
