@@ -26,4 +26,4 @@ module.exports.Serialization = require('./lib/serialization');
 module.exports.PrefabRegistry = require('./lib/prefab_registry');
 
 module.exports.Script = require('./lib/script');
-module.exports.ScriptRegistry = require('./lib/script/registryg.js');
+module.exports.ScriptRegistry = require('./lib/script/registry.js');
