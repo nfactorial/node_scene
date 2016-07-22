@@ -1,6 +1,6 @@
 {
   "name": "@nfactorial/node_scene",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "Core server side scene management.",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@nfactorial/ammo_node": "0.0.1",
-    "@nfactorial/factory_node": "0.0.1",
+    "@nfactorial/factory_node": "0.0.2",
     "@nfactorial/game_state_js": "0.0.81"
   }
 }
